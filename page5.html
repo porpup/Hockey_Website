@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+    Name: Oleksandr Shyryayev
+    Date: October 24th, 2022
+    Description: Project
+-->
+<html lang="en">
+
+<head>
+    <title>Hockey</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script type="text/javascript" src="./js/actions.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        body {
+            background-image: url("./img/ezgif.com-gif-maker.jpg");
+        }
+
+        fieldset {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo" src="./img/logo.png" alt="logo">
+        </div>
+        <div style="font-size: 50px">
+            <span><strong>Contact me</strong></span>
+        </div>
+    </header>
+
+    <div class="box1">
+        <span class="menu"><strong>Menu</strong></span>
+        <table>
+            <tr>
+                <td onclick="backHome()"><span class="spanPadding">Home</span></td>
+            </tr>
+            <tr>
+                <td onclick="page3()"><span class="spanPadding">History of Hockey</span></td>
+            </tr>
+            <tr>
+                <td onclick="page4()"><span class="spanPadding">Leagues</span></td>
+            </tr>
+            <tr>
+                <td onclick="page4_5()"><span class="spanPadding">Play of the Game</span></td>
+            </tr>
+            <tr>
+                <td onclick="lasalleLink()"><span class="spanPadding">LaSalle College</span></td>
+            </tr>
+            <tr>
+                <td onclick="references()"><span class="spanPadding">References</span></td>
+            </tr>
+            <tr>
+                <td onclick="contactUs()"><span class="spanPadding">Contact me</span></td>
+            </tr>
+            <tr>
+                <td class="greyHover"><button style="width: 100%; height: 35px" onclick="logOut()">Log Out</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box2">
+        <br>
+        <br>
+        <form id="form" action="">
+            <fieldset>
+                <br>
+                <br>
+                <div id="container1">
+                    <input type="text" name="fName" id="fName" size="28" placeholder="First Name">
+                    <br>
+                    <br>
+                    <input type="text" name="lName" id="lName" size="28" placeholder="Last Name">
+                    <br>
+                    <br>
+                    <input type="email" name="email" id="email" size="28" placeholder="E-mail"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <br>
+                    <br>
+                    <input type="tel" name="phone" id="phone" size="28" placeholder="Phone No.  ex.: 15141231234"
+                        pattern="[0-9]{11}">
+                </div>
+                <div id="container2">
+                    <textarea name="comment" name="message" id="message" rows="8" cols="30"
+                        placeholder="Message"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <br>
+                <input type="submit" class="button" value="Send Form" onclick="SendForm()">
+                <input type="reset" class="button">
+                <br>
+                <br>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <footer>
+        <div>
+            <span>&copy; 2022 - Oleksandr Shyryayev (Collège LaSalle Montréal)</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

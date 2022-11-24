@@ -1,0 +1,162 @@
+body {
+    min-width: 900px;
+    padding-top: 50px;
+    background-image: url("../img/puck.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+header {
+    border: 2px solid white;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-bottom: 20px;
+    background: lightgrey;
+    text-align: center;
+    padding-top: 20px
+}
+
+
+footer {
+    clear: both;
+    border: 2px solid white;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background: lightgrey;
+}
+
+table {
+    border: 2px solid white;
+}
+
+fieldset {
+    background: rgba(255, 255, 255, 0.8);
+    width: 42%;
+    min-width: 350px;
+}
+
+legend {
+    text-align: center;
+}
+
+#loginTextField {
+    margin: 30px;
+    float: left;
+    width: 50px;
+}
+
+#loginLabels {
+    margin: 30px;
+    width: 79px;
+    float: left;
+}
+
+#login {
+    margin-left: 125px;
+}
+
+::placeholder {
+    color: silver;
+}
+
+td {
+    font-size: large;
+    border-collapse: collapse;
+    background-color: lightgrey;
+    padding: 10px;
+    cursor: pointer;
+}
+
+td:hover {
+    background: orange;   
+}
+
+th {
+    background-color: lightgrey;
+    font-size: 20px;
+    padding: 10px 10px 10px 25px;
+}
+
+p {
+    font-size: 19px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    margin-top: 50px;
+    margin-left: 40px;
+    float: left;
+}
+
+.box2 {
+    border: 2px solid white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    margin-top: 95px;
+    margin-left: 40px;
+    text-align: center;
+    float: left;
+    width: 70%;
+    background: lightgrey;
+    margin-bottom: 30px
+}
+
+.greyHover:hover {
+    background-color: lightgrey;
+    cursor: default;
+
+}
+
+button:hover {
+    background: orange;
+}
+
+.button {
+    width: 30%;
+}
+
+.button:hover {
+    background: orange;
+}
+
+#container1 {
+    float: left;
+    width: 50%;
+}
+
+#container2 {
+    float: left;
+    width: 50%;
+}
+
+.logo {
+    width: 60px;
+    margin-left: 30px;
+    text-align: left;
+    float: left;
+}
+
+.spanPadding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu {
+    padding-left: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: orange;
+}

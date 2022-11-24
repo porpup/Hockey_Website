@@ -1,0 +1,90 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+    Name: Oleksandr Shyryayev
+    Date: October 24th, 2022
+    Description: Project
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Hockey</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script type="text/javascript" src="./js/actions.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url("./img/stickAndPuck.jpg");
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo" src="./img/logo.png" alt="logo">
+        </div>
+        <div style="font-size: 50px">
+            <span><strong>Welcome to Hockey Site</strong></span>
+        </div>
+    </header>
+
+    <div class="box1">
+        <span class="menu"><strong>Menu</strong></span>
+        <table>
+            <tr>
+                <td onclick="backHome()"><span class="spanPadding">Home</span></td>
+            </tr>
+            <tr>
+                <td onclick="page3()"><span class="spanPadding">History of Hockey</span></td>
+            </tr>
+            <tr>
+                <td onclick="page4()"><span class="spanPadding">Leagues</span></td>
+            </tr>
+            <tr>
+                <td onclick="page4_5()"><span class="spanPadding">Play of the Game</span></td>
+            </tr>
+            <tr>
+                <td onclick="lasalleLink()"><span class="spanPadding">LaSalle College</span></td>
+            </tr>
+            <tr>
+                <td onclick="references()"><span class="spanPadding">References</span></td>
+            </tr>
+            <tr>
+                <td onclick="contactUs()"><span class="spanPadding">Contact me</span></td>
+            </tr>
+            <tr>
+                <td class="greyHover"><button style="width: 100%; height: 35px" onclick="logOut()">Log Out</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box2">
+        <br />
+        <br>
+        <h4 style="text-align: justify">
+            <div style="width: 190px; float:left">
+                <p><img src="./img/me.jpg" alt="Oleksandr Shyryayev"></p>
+            </div>
+            <div style="float:left; padding-left: 60px;">
+                <p>My name is Oleksansdr Shyryayev.</p>
+                <p>I'm proud student of Collège LaSalle Montréal.</p>
+                <p>My student ID: 2210888.</p>
+                <p>I'm happy to present you my Hockey site.</p>
+            </div>
+        </h4>
+    </div>
+
+    <footer>
+        <div>
+            <span>&copy; 2022 - Oleksandr Shyryayev (Collège LaSalle Montréal)</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
