@@ -84,16 +84,20 @@ function GetCookieValues() {
     let cookieString = GetCookie("userInfo");
     let form = JSON.parse(cookieString)
 
-    let fname = $('#fName').text(form.FirstName);
-    let lname = $('#lName').text(form.LastName);
-    let email = $('#email').text(form.Email);
-    let phone = $('#phone').text(form.Phone);
-    let message = $('#message').text(form.Message);
+    $('#fName').text(form.FirstName);
+    $('#lName').text(form.LastName);
+    $('#email').text(form.Email);
+    $('#phone').text(form.Phone);
+    $('#message').text(form.Message);
 }
 
 
 function loadServerPage() {
     GetCookieValues();
+    var varTime = new Date(GetCookie("cookieTime"));
+    var currentDate = Date.now();
+    var datediff = new Date(currentDate - varTime);
+    $('#time').text(datediff.getSeconds());
 }
 
 
@@ -102,6 +106,12 @@ function SetCookie(cname, cvalue, exdays, path) {
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=" + path;
+}
+
+
+function storeTime() {
+    const d = new Date();
+    SetCookie("cookieTime", d, 5);
 }
 
 
