@@ -39,8 +39,8 @@ function contactUs(){
 }
 
 
-function lasalleLink(){
-    window.open("https://www.lasallecollege.com/");
+function stadiumMap(){
+    window.location.href = "page7.html";
 }
 
 
@@ -67,7 +67,6 @@ class Form {
 
 
 function SendForm() {
-    //First let's get the values from the input fields using Jquery
     let fName = $('#fName').val();
     let lName = $('#lName').val();
     let email = $('#email').val();
@@ -77,7 +76,7 @@ function SendForm() {
     let form = new Form(fName, lName, email, phone, message);    
     let cookieString = JSON.stringify(form);
     SetCookie("userInfo", cookieString, 5);
-    $(location).attr('href','page5.5.html');
+    window.open("page5.5.html");
 }
 
 
@@ -85,11 +84,11 @@ function GetCookieValues() {
     let cookieString = GetCookie("userInfo");
     let form = JSON.parse(cookieString)
 
-    let fname = $('#fName').val(form.FirstName);
-    let lname = $('#lName').val(form.LastName);
-    let email = $('#email').val(form.Email);
-    let phone = $('#phone').val(form.Phone);
-    let message = $('#message').val(form.Message);
+    let fname = $('#fName').text(form.FirstName);
+    let lname = $('#lName').text(form.LastName);
+    let email = $('#email').text(form.Email);
+    let phone = $('#phone').text(form.Phone);
+    let message = $('#message').text(form.Message);
 }
 
 
