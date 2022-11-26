@@ -7,16 +7,26 @@
 <html lang="en">
 
 <head>
-    <title>Hockey</title>
+    <title>Play of the Game</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script type="text/javascript" src="./js/actions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <style>
         body {
             background-image: url("./img/rules.jpg");
+        }
+
+        .box2 {
+            margin-top: 10px;
+        }
+
+        .box1 {
+            margin-top: -35px;
         }
     </style>
 
@@ -31,6 +41,15 @@
             <span><strong>Play of the Game</strong></span>
         </div>
     </header>
+
+    <div class="flexbox">
+        <div class="search">
+            <div>
+                <input name="search" id="search" type="search" placeholder="Search . . ." required autocomplete="off">
+            </div>
+        </div>
+    </div>
+
     <div>
         <div class="box1">
             <span class="menu"><strong>Menu</strong></span>
@@ -65,11 +84,11 @@
 
         <div class="box2">
             <br />
-            <h1>Rink and equipment</h1>
+            <h1 id="box">Rink and equipment</h1>
             <br>
             <h4 style="text-align: justify">
                 <p><img src="./img/field.jpg" alt="field"></p>
-                <p>NHL hockey is typically played on a standard-size rink shaped
+                <p id="box1">NHL hockey is typically played on a standard-size rink shaped
                     like a round-cornered rectangle that is 200 feet (61 metres)
                     long and 85 feet (26 metres) wide. International rinks are usually
                     184–200 feet by 85–98 feet, and U.S. college rinks are typically
@@ -85,7 +104,7 @@
                     (18 metres) out from the goal line and are painted across the width
                     of the ice. The area between the blue lines is called the neutral
                     zone. This zone is bisected by the red centre line.</p>
-                <p>Virtually all equipment—for children, amateurs, or professionals—is
+                <p id="box2">Virtually all equipment—for children, amateurs, or professionals—is
                     the same. Made of vulcanized rubber, the puck is 1 inch (2.5 cm) thick
                     and 3 inches (7.6 cm) in diameter and weighs 5.5 to 6 ounces
                     (156 to 170 grams). Hockey sticks, once made from wood, are now formed
@@ -99,7 +118,7 @@
                     helmets and face masks are mandatory in National Collegiate Athletic
                     Association (NCAA) and IIHF play. The goaltender wears a specially
                     designed mask (often molded to the contours of his face).</p>
-                <p>Over his uniform a goalie wears extra equipment. Pads up to 11
+                <p id="box3">Over his uniform a goalie wears extra equipment. Pads up to 11
                     inches (25.4 cm) wide protect him from the tips of his skates
                     to above his knees. They not only afford protection but also aid
                     in blocking shots. On his free hand the goalie wears a glove similar
@@ -110,13 +129,13 @@
                     goaltenders carry up to 40 pounds (18 kg) of equipment.</p>
             </h4>
             <br />
-            <h1>Rules and principles of play</h1>
+            <h1 id="box4">Rules and principles of play</h1>
             <br>
             <h4 style="text-align: justify">
                 <p><img src="./img/referee.jpg" alt="referee"></p>
-                <p>The modern game on every level—amateur, collegiate, international,
+                <p id="box5">The modern game on every level—amateur, collegiate, international,
                     and professional—has been influenced largely by the NHL.</p>
-                <p>Checking—body contact to take an opponent out of play—is permitted
+                <p id="box6">Checking—body contact to take an opponent out of play—is permitted
                     anywhere on the ice. In most leagues, including the NHL, players
                     may not make or take a pass that has traveled across the two blue
                     lines; if this occurs, the play is ruled offside. A face-off, in
@@ -126,16 +145,16 @@
                     offside, and a face-off is held at a face-off spot near the attacking
                     blue line. A face-off also begins each period and is used as well
                     after a goal and after any stoppage of play.</p>
-                <p>The goalie rarely leaves his goal area. The usual alignments of
+                <p id="box7">The goalie rarely leaves his goal area. The usual alignments of
                     the other five players are three forwards—the centre, a left wing,
                     and a right wing—and two defensemen—a left defenseman and
                     a right defenseman.</p>
-                <p>A player may handle the puck as often or as long as he likes,
+                <p id="box8">A player may handle the puck as often or as long as he likes,
                     so long as he does not close his glove on the puck or touch
                     the puck with a stick that is higher than shoulder level.
                     A player may not pass the puck with his open hand. The goalie,
                     however, is generally not subject to these restrictions.</p>
-                <p>The game is divided into three periods of 20 minutes playing time
+                <p id="box9">The game is divided into three periods of 20 minutes playing time
                     each, with a 15-minute intermission between periods. Hockey games
                     may end in a tie unless the rules stipulate an overtime period
                     to serve as a tiebreaker. In the case of a tie in college hockey,
@@ -148,7 +167,7 @@
                     international hockey; however, Olympic competition since 1994
                     has had a 10-minute sudden-death period, followed by a shootout
                     if needed.</p>
-                <p>In organized ice hockey a victory is worth two points in the standings.
+                <p id="box10">In organized ice hockey a victory is worth two points in the standings.
                     A tie is worth one point, and the NHL, which has no ties, awards a
                     point to a team that loses in overtime. A goal counts as a point for
                     the team, but individual points may be awarded to as many as three
@@ -156,12 +175,12 @@
                     goal, and a point is awarded for an assist to each of the last two
                     of the scorer’s teammates who touched the puck, providing that the
                     opposition did not handle the puck in the interim.</p>
-                <p>Ice hockey is the only major sport in which substitutions are
+                <p id="box11">Ice hockey is the only major sport in which substitutions are
                     permitted while the game is in play. The game is so fast and
                     so demanding that forwards generally skate only 90 seconds at
                     a time. Defensemen usually stay on the ice for a slightly
                     longer period of time.</p>
-                <p>Because of the speed and contact, there are many infractions,
+                <p id="box12">Because of the speed and contact, there are many infractions,
                     not all of them having to do with "hitting" penalties.
                     Play is stopped for an offside and for the infraction called
                     icing, which occurs when a team shoots the puck out of its
@@ -172,7 +191,7 @@
                     zone of the team that iced it for the face-off. No player,
                     however, may delay the game by intentionally shooting the
                     puck out of the rink or by shifting the goalposts.</p>
-                <p>Minor penalties are most commonly assessed for excessive
+                <p id="box13">Minor penalties are most commonly assessed for excessive
                     use of the body or equipment to impede the opposition.
                     For a minor infraction the offending player must remain
                     in the penalty box at the side of the rink for two minutes
@@ -188,7 +207,7 @@
                     penalty for abusing an official results in the loss of a
                     player for 10 minutes; however, a substitution is allowed,
                     and the team does not play shorthanded.</p>
-                <p>There are three common types of shots in hockey: the slap
+                <p id="box14">There are three common types of shots in hockey: the slap
                     shot, the wrist shot, and the backhander. The slap shot
                     has been timed at more than 100 miles an hour (160 km an hour).
                     The slap shot differs from the wrist shot in that the player
@@ -213,6 +232,95 @@
             <span>&copy; 2022 - Oleksandr Shyryayev (Collège LaSalle Montréal)</span>
         </div>
     </footer>
+
+    <script type="text/javascript">
+        const $box = document.getElementById('box');
+        const $box1 = document.getElementById('box1');
+        const $box2 = document.getElementById('box2');
+        const $box3 = document.getElementById('box3');
+        const $box4 = document.getElementById('box4');
+        const $box5 = document.getElementById('box5');
+        const $box6 = document.getElementById('box6');
+        const $box7 = document.getElementById('box7');
+        const $box8 = document.getElementById('box8');
+        const $box9 = document.getElementById('box9');
+        const $box10 = document.getElementById('box10');
+        const $box11 = document.getElementById('box11');
+        const $box12 = document.getElementById('box12');
+        const $box13 = document.getElementById('box13');
+        const $box14 = document.getElementById('box14');
+
+        const $search = document.getElementById('search');
+
+        $search.addEventListener('input', (event) => {
+            const searchText = event.target.value;
+            const regex = new RegExp(searchText, 'gi');
+
+            let text = $box.innerHTML;
+            let text1 = $box1.innerHTML;
+            let text2 = $box2.innerHTML;
+            let text3 = $box3.innerHTML;
+            let text4 = $box4.innerHTML;
+            let text5 = $box5.innerHTML;
+            let text6 = $box6.innerHTML;
+            let text7 = $box7.innerHTML;
+            let text8 = $box8.innerHTML;
+            let text9 = $box9.innerHTML;
+            let text10 = $box10.innerHTML;
+            let text11 = $box11.innerHTML;
+            let text12 = $box12.innerHTML;
+            let text13 = $box13.innerHTML;
+            let text14 = $box14.innerHTML;
+
+            text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text1 = text1.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text2 = text2.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text3 = text3.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text4 = text4.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text5 = text5.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text6 = text6.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text7 = text7.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text8 = text8.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text9 = text9.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text10 = text10.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text11 = text11.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text12 = text12.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text13 = text13.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+            text14 = text14.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+
+            const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText1 = text1.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText2 = text2.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText3 = text3.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText4 = text4.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText5 = text5.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText6 = text6.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText7 = text7.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText8 = text8.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText9 = text9.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText10 = text10.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText11 = text11.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText12 = text12.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText13 = text13.replace(regex, '<mark class="highlight">$&</mark>');
+            const newText14 = text14.replace(regex, '<mark class="highlight">$&</mark>');
+
+            $box.innerHTML = newText;
+            $box1.innerHTML = newText1;
+            $box2.innerHTML = newText2;
+            $box3.innerHTML = newText3;
+            $box4.innerHTML = newText4;
+            $box5.innerHTML = newText5;
+            $box6.innerHTML = newText6;
+            $box7.innerHTML = newText7;
+            $box8.innerHTML = newText8;
+            $box9.innerHTML = newText9;
+            $box10.innerHTML = newText10;
+            $box11.innerHTML = newText11;
+            $box12.innerHTML = newText12;
+            $box13.innerHTML = newText13;
+            $box14.innerHTML = newText14;
+        });
+    </script>
 
 </body>
 

@@ -82,7 +82,7 @@ td {
 }
 
 td:hover {
-    background: orange;   
+    background: orange;
 }
 
 th {
@@ -165,4 +165,80 @@ button:hover {
     text-align: center;
     font-size: 30px;
     color: orange;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+    font-family: Roboto, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.flexbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    margin: 20px;
+}
+
+.search>h3 {
+    font-weight: normal;
+}
+
+.search>h1,
+.search>h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 1px black;
+}
+
+.search>div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px orange);
+}
+
+.search>div:after {
+    content: "";
+    background: orange;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    transform: rotate(145deg);
+}
+
+.search>div>input {
+    color: orange;
+    font-size: 16px;
+    background: transparent;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border: solid 3px orange;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+
+.search>div>input::placeholder {
+    color: sal;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.search>div>input:focus::placeholder {
+    opacity: 1;
+}
+
+.search>div>input:focus,
+.search>div>input:not(:placeholder-shown) {
+    width: 250px;
 }
