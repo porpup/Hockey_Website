@@ -50,6 +50,7 @@ fieldset {
 }
 
 legend {
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -61,12 +62,17 @@ legend {
 
 #loginLabels {
     margin: 30px;
-    width: 79px;
+    width: 81px;
     float: left;
 }
 
 #login {
-    margin-left: 125px;
+    width: 100px;
+    margin-left: 98px;
+}
+
+#login:hover {
+    background: orange;
 }
 
 ::placeholder {
