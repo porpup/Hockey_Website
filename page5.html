@@ -41,77 +41,80 @@
             <span><strong>Contact me</strong></span>
         </div>
     </header>
-<div>
-    <div class="box1">
-        <span class="menu"><strong>Menu</strong></span>
-        <table>
-            <tr>
-                <td onclick="backHome()"><span class="spanPadding">Home</span></td>
-            </tr>
-            <tr>
-                <td onclick="page3()"><span class="spanPadding">History of Hockey</span></td>
-            </tr>
-            <tr>
-                <td onclick="page4()"><span class="spanPadding">Leagues</span></td>
-            </tr>
-            <tr>
-                <td onclick="page4_5()"><span class="spanPadding">Play of the Game</span></td>
-            </tr>
-            <tr>
-                <td onclick="stadiumMap()"><span class="spanPadding">Map of NHL Stadiums</span></td>
-            </tr>
-            <tr>
-                <td onclick="references()"><span class="spanPadding">References</span></td>
-            </tr>
-            <tr>
-                <td onclick="contactUs()"><span class="spanPadding">Contact me</span></td>
-            </tr>
-            <tr>
-                <td onclick="searchContent()()"><span class="spanPadding">Content Search</span></td>
-            </tr>
-            <tr>
-                <td class="greyHover"><button style="width: 100%; height: 35px" onclick="logOut()">Log Out</button></td>
-            </tr>
-        </table>
-    </div>
 
-    <div class="box2">
-        <br>
-        <br>
-        <form id="form" action="">
+    <div>
+        <div class="box1">
+            <span class="menu"><strong>Menu</strong></span>
+            <table>
+                <tr>
+                    <td onclick="backHome()"><span class="spanPadding">Home</span></td>
+                </tr>
+                <tr>
+                    <td onclick="page3()"><span class="spanPadding">History of Hockey</span></td>
+                </tr>
+                <tr>
+                    <td onclick="page4()"><span class="spanPadding">Leagues</span></td>
+                </tr>
+                <tr>
+                    <td onclick="page4_5()"><span class="spanPadding">Play of the Game</span></td>
+                </tr>
+                <tr>
+                    <td onclick="stadiumMap()"><span class="spanPadding">Map of NHL Stadiums</span></td>
+                </tr>
+                <tr>
+                    <td onclick="references()"><span class="spanPadding">References</span></td>
+                </tr>
+                <tr>
+                    <td onclick="contactUs()"><span class="spanPadding">Contact me</span></td>
+                </tr>
+                <tr>
+                    <td onclick="searchContent()()"><span class="spanPadding">Content Search</span></td>
+                </tr>
+                <tr>
+                    <td class="greyHover"><button style="width: 100%; height: 35px" onclick="logOut()">Log Out</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box2">
+            <br>
+            <br>
+            <form id="form" action="">
+                <fieldset>
+                    <br>
+                    <br>
+                    <div id="container1">
+                        <input type="text" name="fName" id="fName" size="28" placeholder="First Name">
+                        <br>
+                        <br>
+                        <input type="text" name="lName" id="lName" size="28" placeholder="Last Name">
+                        <br>
+                        <br>
+                        <input type="email" name="email" id="email" size="28" placeholder="E-mail"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <br>
+                        <br>
+                        <input type="tel" name="phone" id="phone" size="28" placeholder="Phone No.  ex.: 15141231234"
+                            pattern="[0-9]{11}">
+                    </div>
+                    <div id="container2">
+                        <textarea name="comment" name="message" id="message" rows="8" cols="30"
+                            placeholder="Message"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+
             <fieldset>
                 <br>
+                <input type="submit" class="button" value="Send Form" onclick="SendForm()">
+                <input type="reset" class="button">
                 <br>
-                <div id="container1">
-                    <input type="text" name="fName" id="fName" size="28" placeholder="First Name">
-                    <br>
-                    <br>
-                    <input type="text" name="lName" id="lName" size="28" placeholder="Last Name">
-                    <br>
-                    <br>
-                    <input type="email" name="email" id="email" size="28" placeholder="E-mail"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <br>
-                    <br>
-                    <input type="tel" name="phone" id="phone" size="28" placeholder="Phone No.  ex.: 15141231234"
-                        pattern="[0-9]{11}">
-                </div>
-                <div id="container2">
-                    <textarea name="comment" name="message" id="message" rows="8" cols="30"
-                        placeholder="Message"></textarea>
-                </div>
+                <br>
             </fieldset>
-        </form>
-        
-        <fieldset>
-            <br>
-            <input type="submit" class="button" value="Send Form" onclick="SendForm()">
-            <input type="reset" class="button">
-            <br>
-            <br>
-        </fieldset>
+        </div>
     </div>
-</div>
+    
     <footer>
         <div>
             <span>&copy; 2022 - Oleksandr Shyryayev (Collège LaSalle Montréal)</span>
