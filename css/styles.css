@@ -75,8 +75,8 @@ legend {
     background: orange;
 }
 
-::placeholder {
-    color: silver;
+::placeholder{
+    color: orange;
 }
 
 td {
@@ -207,7 +207,7 @@ button:hover {
 .search>div {
     display: inline-block;
     position: relative;
-    filter: drop-shadow(0 1px orange);
+    filter: drop-shadow(0 1px salmon);
 }
 
 .search>div:after {
