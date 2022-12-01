@@ -3,7 +3,7 @@ let password = "123";
 
 function SubmitLogin() {
     let v1, v2;
-    
+
     v1 = document.getElementById("userName").value.toLowerCase();
     v2 = document.getElementById("password").value;
     if (v1 == userName && v2 == password) {
@@ -14,37 +14,37 @@ function SubmitLogin() {
 }
 
 
-function backHome(){
+function backHome() {
     window.location.href = "home.html";
 }
 
 
-function page3(){
+function page3() {
     window.location.href = "page3.html";
 }
 
 
-function page4(){
+function page4() {
     window.location.href = "page4.html";
 }
 
 
-function page4_5(){
+function page4_5() {
     window.location.href = "page4.5.html";
 }
 
 
-function contactUs(){
+function contactUs() {
     window.location.href = "page5.html"
 }
 
 
-function stadiumMap(){
+function stadiumMap() {
     window.location.href = "page7.html";
 }
 
 
-function references(){
+function references() {
     window.location.href = "page6.html";
 }
 
@@ -76,8 +76,8 @@ function SendForm() {
     let email = $('#email').val();
     let phone = $('#phone').val();
     let message = $('#message').val();
-    
-    let form = new Form(fName, lName, email, phone, message);    
+
+    let form = new Form(fName, lName, email, phone, message);
     let cookieString = JSON.stringify(form);
     SetCookie("userInfo", cookieString, 5);
     window.open("page5.5.html");
@@ -135,50 +135,68 @@ function GetCookie(cname) {
 }
 
 
+class SearchLink {
+    constructor(key, internalLink, description) {
+        this.key = key;
+        this.internalLink = internalLink;
+        this.description = description;
+    }
+}
 
 
+var arrLinks = [
+    new SearchLink("League rivalries", "page4.html#box1", "The National Hockey Association (NHA), the forerunner of the National Hockey League (NHL)..."),
+    new SearchLink("NHL", "page4.html#box4", "Like some of its predecessors, the NHA had its dissenters..."),
+    new SearchLink("International ice hockey", "page4.html#box8", "For much of the 20th century, amateur athletes dominated international competition..."),
+    new SearchLink("Women’s hockey", "page4.html#box11", "Though considered a male sport, hockey has been played by women..."),
+    new SearchLink("Rink and equipment", "page4.5.html#box1", "NHL hockey is typically played on a standard-size rink shaped like a round-cornered..."),
+    new SearchLink("Rules and principles of play", "page4.5.html#box5", "The modern game on every level—amateur, collegiate, international..."),
+    new SearchLink("Birth of hockey", "page3.html#box2", "It is impossible to claim the exact time of the birth of hockey..."),
+    new SearchLink("Name hockey", "page3.html#box3", "The name “hockey” is thought to be derived from the French..."),
+    new SearchLink("The first set of rules of ice hockey", "page3.html#box4", "J. G. Creighton was the Canadian from Halifax, Nova Scotia..."),
+    new SearchLink("Soft hockey", "page3.html#box7", "Soft hockey has been played in the ancient period by different..."),
+    new SearchLink("The first Olympic Hockey Competition", "page3.html#box8", "The first Olympic Hockey Competition for men took place in London in..."),
+    new SearchLink("Roller Skate Hockey", "page3.html#box10", "Another hockey sport, which was played for the first time in the city of..."),
+    new SearchLink("Indoor Hockey", "page3.html#box11", "Indoor hockey is very similar to field hockey but only adapted for...")
+];
 
 
+function searchResult() {    
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('boxSearch').innerHTML = '';
+    var searchResult = "<a href='page3.html' title='@box2'>";
 
+    var str = $("#txt_term").val();
+    const html = "<a href='@link' title='@title'>" +
+        "<b>@title</b>" +
+        "</a><br>" +
+        "<cite>@link</cite><br>" +
+        "<p>@description</p><br>";
 
+    var quantityFound = 0;
 
-// function checkPlanet() {
-//     //arrays containing data for 3 planets
-//     var arrNames = ["sun", "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
-//     var arrDias = ["1,390,000 km", "4,880 km", "12,103.6 km", "12,756.3 km", "6,794 km", "142,984 km",
-//         "120,536 km", "51,118 km", "49,532 km"];
-//     var arrDistances = ["Temperature: 5800 K (surface) 15,600,000 K (core)", "Orbit: 57,910,000 km (0.38 AU) from Sun",
-//         "Orbit: 108,200,000 km (0.72 AU) from Sun", "Orbit: 149,600,000 km (1.00 AU) from Sun",
-//         "Orbit: 227,940,000 km (1.52 AU) from Sun", "Orbit: 778,330,000 km (5.20 AU) from Sun",
-//         "Orbit: 1,429,400,000 km (9.54 AU) from Sun", "Orbit: 2,870,990,000 km (19.218 AU) from Sun",
-//         "Orbit: 4,504,000,000 km (30.06 AU) from Sun"];
-//     var arrImgs = ["./Img/Sun.jpg", "./Img/Mercury.jpg", "./Img/Venus.jpg", "./Img/Earth.jpg", "./Img/Mars.jpg",
-//         "./Img/Jupiter.jpg", "./Img/Saturn.jpg", "./Img/Uranus.jpg", "./Img/Neptune.jpg"];
+    if (str.length > 2) {
+        arrLinks.forEach(el => {
+            if (new RegExp(str, 'i').test(el.key)) {
+                quantityFound++;
+                var li = html.replace(/@title/g, el.key);
+                li = li.replace(/@link/g, el.internalLink);
+                li = li.replace(/@description/g, el.description);
+                $("#results").append(li);
+            }
+        });
+    }
 
-//     var result, nPlanet, imgPlanet;
-//     nPlanet = document.getElementById("PName").value.toLowerCase();
+    if (quantityFound == 0) {
+        $("#boxSearch").append("<h4>Found nothing...</h4>");
+        $("#boxSearch").append("<h5>You could be interested in:</h5>" + "<br>");
+    }
 
-//     var index = -1;
-//     var planetName;
-
-//     for (var i = 0; i < arrNames.length; i++) {  //using loop for the search
-//         if (arrNames[i] == nPlanet) {
-//             index = i;
-//             result = "Planet: " + arrNames[index].toUpperCase() +
-//                 ", having Diameter of: " + arrDias[index] +
-//                 " and " + arrDistances[index];
-//             imgPlanet = arrImgs[index];
-//             planetName = arrNames[index].toUpperCase();
-//         }
-//     }
-
-//     if (index == -1) {  //no planet name was found
-//         result = "Found no planet with this name!";
-//         imgPlanet = "./Img/none.jpg";
-//     }
-
-//     document.getElementById("Res").innerHTML = result;
-//     document.getElementById("Rimg").src = imgPlanet;
-//     var cookiePlanetContent = planetName + "|" + Date.now();
-//     SetCookie("cookiePlanet", cookiePlanetContent, 10, "/");
-// }
+    for (var i = 0; i < 3; i++) {
+        let index = Math.floor(Math.random() * (arrLinks.length - 5));
+        var li = html.replace(/@title/g, arrLinks[index].key);
+        li = li.replace(/@link/g, arrLinks[index].internalLink);
+        li = li.replace(/@description/g, arrLinks[index].description);
+        $("#results").append(li);
+    }
+}

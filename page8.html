@@ -165,17 +165,17 @@
 <body>
     <div>
         <div id="cover">
-            <form method="get" action="">
-                <div class="tb">
-                    <div class="td"><input type="text" placeholder="Search" required></div>
-                    <div class="td" id="s-cover">
-                        <button type="submit">
-                            <div id="s-circle"></div>
-                            <span></span>
-                        </button>
-                    </div>
+
+            <div class="tb">
+                <div class="td"><input id="txt_term" type="text" placeholder="Search" required></div>
+                <div class="td" id="s-cover">
+                    <button type="submit" id="btn1" onclick="searchResult()">
+                        <div id="s-circle"></div>
+                        <span></span>
+                    </button>
                 </div>
-            </form>
+            </div>
+
         </div>
 
         <div class="box1" style="margin-top: 169px">
@@ -213,9 +213,14 @@
                 </tr>
             </table>
         </div>
-        <div class="box2" style="margin-top: 215px">
+        <div class="box2" style="margin-top: 215px; display: none">
             <br />
             <h1 id="box" style="text-align: left">Search results:</h1>
+            <div id="boxSearch">
+            </div>
+
+            <div id="results" style="text-align: left; background-color: white">
+            </div>
         </div>
     </div>
 
@@ -225,6 +230,13 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".box2").show("linear");
+            });
+        });
+    </script>
 </body>
 
 </html>
