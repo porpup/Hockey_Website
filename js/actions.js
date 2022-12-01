@@ -161,7 +161,7 @@ var arrLinks = [
 ];
 
 
-function searchResult() {    
+function searchResult() {
     document.getElementById('results').innerHTML = '';
     document.getElementById('boxSearch').innerHTML = '';
     var searchResult = "<a href='page3.html' title='@box2'>";
@@ -190,13 +190,13 @@ function searchResult() {
     if (quantityFound == 0) {
         $("#boxSearch").append("<h4>Found nothing...</h4>");
         $("#boxSearch").append("<h5>You could be interested in:</h5>" + "<br>");
-    }
 
-    for (var i = 0; i < 3; i++) {
-        let index = Math.floor(Math.random() * (arrLinks.length - 5));
-        var li = html.replace(/@title/g, arrLinks[index].key);
-        li = li.replace(/@link/g, arrLinks[index].internalLink);
-        li = li.replace(/@description/g, arrLinks[index].description);
-        $("#results").append(li);
+        for (var i = 0; i < 3; i++) {
+            let index = Math.floor(Math.random() * (arrLinks.length - 5));
+            var li = html.replace(/@title/g, arrLinks[index].key);
+            li = li.replace(/@link/g, arrLinks[index].internalLink);
+            li = li.replace(/@description/g, arrLinks[index].description);
+            $("#results").append(li);
+        }
     }
 }
