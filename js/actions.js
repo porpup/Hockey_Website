@@ -164,7 +164,6 @@ var arrLinks = [
 function searchResult() {
     document.getElementById('results').innerHTML = '';
     document.getElementById('boxSearch').innerHTML = '';
-    var searchResult = "<a href='page3.html' title='@box2'>";
 
     var str = $("#txt_term").val();
     const html = "<a href='@link' title='@title'>" +
