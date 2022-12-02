@@ -188,7 +188,7 @@ function searchResult() {
     }
 
     if (quantityFound == 0) {
-        $("#boxSearch").append("<h4>Found nothing...</h4>");
+        $("#boxSearch").append("<h4>not found...</h4>");
         $("#boxSearch").append("<h5>You could be interested in:</h5>" + "<br>");
 
         for (var i = 0; i < 3; i++) {
