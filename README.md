@@ -1,6 +1,6 @@
 # Hockey_Website
 
-Mini web site using XHTML and HTML 5 pages, CSS formatting, web form pages and JavaScript (using objects string, array, Date, RegExp, math, cookie, jQuery, etc. and functions).
+Mini web site using XHTML and HTML 5 pages, CSS formatting, web form pages and JavaScript (using objects string, array, Date, RegEx, math, cookie, jQuery, etc. and functions).
 
 
 Choose one out of 3 different domains (History, Geography, or Sport) that you want to create your project. If you want to create it for different domain, you must mention it.
