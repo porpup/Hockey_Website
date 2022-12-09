@@ -1,4 +1,4 @@
-let userName = "admin";
+let userName = "fname@proj.ca";
 let password = "123";
 
 function SubmitLogin() {
@@ -9,7 +9,7 @@ function SubmitLogin() {
     if (v1 == userName && v2 == password) {
         window.location.href = "home.html";
     } else {
-        alert("Enter:\nUser Name: admin\nPassword: 123");
+        alert("Enter:\nUser Name: FName@proj.ca\nPassword: 123");
     }
 }
 
