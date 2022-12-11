@@ -1,4 +1,4 @@
-# Hockey_Website
+# Website_about_Hockey
 
 Mini web site using XHTML and HTML 5 pages, CSS formatting, web form pages and JavaScript (using objects string, array, Date, RegEx, math, cookie, jQuery, etc. and functions).
 
